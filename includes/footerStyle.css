@@ -1,0 +1,30 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #c5cff8;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer div {
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    background: #004cff;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+footer a:hover{
+    background-color: #00078b;
+}

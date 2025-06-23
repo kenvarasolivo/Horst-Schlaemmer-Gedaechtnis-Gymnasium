@@ -1,0 +1,157 @@
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    background-color: #c5cff8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav img {
+    height: 100px;
+    margin-right: 15px;
+}
+
+nav div {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #3b66b5;
+    flex: 1;
+    text-align: center;
+}
+form{
+    margin-right: 10px;
+}
+
+form[role="search"] {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background-color: #116df8;
+    border: 2px solid #00078b;
+    border-radius: 20px;
+}
+
+form[role="search"] input[type="text"] {
+    flex-grow: 1;
+    padding: 8px;
+    font-size: 1em;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+}
+
+form[role="search"] button {
+    padding: 8px;
+    font-size: 1.5em;
+    color: white;
+    background-color: #00078b;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+form[role="search"] button:hover {
+    background-color: turquoise;
+}
+
+#search-results div {
+    padding: 10px;
+    font-size: 1em;
+    color: black;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+#search-results div:last-child {
+    border-bottom: none;
+}
+
+#search-results {
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#search-results div {
+    padding: 10px;
+    font-size: 1em;
+    color: #116df8;
+    border-bottom: 1px solid black;
+    cursor: pointer
+}
+
+#search-results div:last-child {
+    border-bottom: none;
+}
+
+/* Suchergebnisse bei Fokus auf das Eingabefeld anzeigen */
+form[role="search"]:focus-within #search-results {
+    display: block;
+}
+
+#search-form:focus-within #search-results {
+    display: block;
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: initial !important;
+    }
+    
+    nav div {
+        font-size: 1.5em !important;
+        display: inline;
+        top: 0 !important;
+        position: absolute !important;
+    }
+    
+    main {
+        margin-top: 150px !important;
+    }
+    
+    #search-form {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    #search-results {
+        display: none;
+        top: 174px !important;
+    }
+    
+    .logout-btn {
+        position: absolute !important;
+        top: 56px !important;
+        right: 10px !important;
+    }
+    
+    .back-button {
+        top: 185px !important;
+    }
+}
